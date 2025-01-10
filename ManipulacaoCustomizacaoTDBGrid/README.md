@@ -3,7 +3,7 @@
 Este repositório contém um módulo Delphi com funções utilitárias para manipulação e customização de componentes `TDBGrid`.
 Ele facilita ajustes visuais, comportamentais e estéticos em aplicações Delphi que utilizam grids para exibição de dados.
 
-### **1. FuncoesGenerics**
+### **1. ManipulacaoCustomizacaoTDBGrid**
 
 Este módulo contém métodos utilitários para manipulação de componentes `TDBGrid` e outros comportamentos visuais e funcionais comuns em aplicações Delphi.
 
