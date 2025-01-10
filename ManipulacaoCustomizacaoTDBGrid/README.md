@@ -1,12 +1,50 @@
-
 # ManipulacaoCustomizacaoTDBGrid
 
 Este repositório contém um módulo Delphi com funções utilitárias para manipulação e customização de componentes `TDBGrid`.
 Ele facilita ajustes visuais, comportamentais e estéticos em aplicações Delphi que utilizam grids para exibição de dados.
 
+### **1. FuncoesGenerics**
+
+Este módulo contém métodos utilitários para manipulação de componentes `TDBGrid` e outros comportamentos visuais e funcionais comuns em aplicações Delphi.
+
+- **Funções e Procedimentos:**
+
+  - AjustarTamanhoLinha
+  - DrawColumnCell
+  - RemoverBarraRolagem
+  - AjustaColunas
+  - TirarBeepEnter
+
+- **Padrão de Nomeação:**
+  Este módulo utiliza um padrão de nomeação para facilitar a leitura e manutenção do código, adotado em diversas práticas da indústria de software:
+
+  - **Prefixo `p` para parâmetros**: Indica que a variável é um parâmetro passado para a função ou procedimento.  
+    Exemplo: `pDBGrid`, `pWidth`.
+
+  - **Prefixo `v` para variáveis locais**: Indica que a variável é declarada e usada localmente dentro de uma função ou procedimento.  
+    Exemplo: `vContarColunas`, `vLarguraColuna`.
+
+  **Benefícios:**
+
+  - **Clareza:** Facilita a identificação do escopo da variável ao bater os olhos no código.
+  - **Organização:** Reduz a chance de confundir variáveis locais com parâmetros.
+  - **Consistência:** Seguir um padrão torna o código mais legível para outros desenvolvedores.
+
+  **Exemplo Prático:**
+
+  ```pascal
+  procedure AjustaColunas(pDBGrid: TDBGrid; pWidth: Integer);
+  var
+    vContarColunas: Integer;
+  begin
+    vContarColunas := pDBGrid.Columns.Count;
+    // Uso do parâmetro pWidth e variável local vContarColunas
+  end;
+  ```
+
 ---
 
-## **Conteúdo**
+## **Conteúdo Principal**
 
 O arquivo principal do projeto é:
 
@@ -16,7 +54,7 @@ O arquivo principal do projeto é:
 
 ## **Funções e Procedimentos**
 
-### **1. AjustarTamanhoLinha**
+### **2. AjustarTamanhoLinha**
 
 Define a altura padrão de cada linha em um `TDBGrid`.
 
@@ -26,7 +64,7 @@ Define a altura padrão de cada linha em um `TDBGrid`.
 
 ---
 
-### **2. DrawColumnCell**
+### **3. DrawColumnCell**
 
 Personaliza a aparência das células de um `TDBGrid`, aplicando cores alternadas (“zebra”) e estilização de seleção.
 
@@ -39,7 +77,7 @@ Personaliza a aparência das células de um `TDBGrid`, aplicando cores alternada
 
 ---
 
-### **3. RemoverBarraRolagem**
+### **4. RemoverBarraRolagem**
 
 Remove as barras de rolagem (vertical e horizontal) de um `TDBGrid`.
 
@@ -48,7 +86,7 @@ Remove as barras de rolagem (vertical e horizontal) de um `TDBGrid`.
 
 ---
 
-### **4. AjustaColunas**
+### **5. AjustaColunas**
 
 Ajusta automaticamente a largura das colunas de um `TDBGrid` com base na largura total e no número de colunas.
 
@@ -61,7 +99,7 @@ Ajusta automaticamente a largura das colunas de um `TDBGrid` com base na largura
 
 ---
 
-### **5. TirarBeepEnter**
+### **6. TirarBeepEnter**
 
 Previne o som de "beep" ao pressionar a tecla **Enter** em componentes de entrada.
 
